@@ -1,0 +1,192 @@
+/* Reset some basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#cart {
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Banner Section */
+#banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+#banner img {
+    width: 100%; /* Makes the image take full width of the container */
+    height: 370px; /* Sets a fixed height; adjust as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block; /* Removes any unwanted space below the image */
+}
+
+.banner-text {
+    position: absolute; /* Make it absolute to position relative to the banner */
+    top: 93%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-105%, -50%); /* Adjust centering */
+    background-color: rgba(0, 0, 0, 0.1); /* Add a semi-transparent background for better text visibility */
+    padding: 20px;
+    border-radius: 10px; /* Add some border radius for styling */
+    text-align: left; /* Center-align the text */
+}
+
+.banner-text h2 {
+    font-size: 1em; /* Increase font size for visibility */
+    margin-bottom: 10px;
+    color: #fff; /* Ensure the heading is white for contrast */
+}
+
+.banner-text p {
+    font-size: 0.9em; /* Adjust the font size */
+    color: #fff; /* Ensure paragraph text is white for contrast */
+    margin: 0;
+}
+
+/* Products Section */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.price {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* Additional Information Section */
+#info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+#info h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#info p {
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+    }
+
+    .banner-text h2 {
+        font-size: 2em;
+    }
+
+    .banner-text p {
+        font-size: 1em;
+    }
+}
